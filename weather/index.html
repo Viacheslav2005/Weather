@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в разных городах</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #weather {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Выбор города</h1>
+    <select id="citySelect" onchange="getWeather(this.value)">
+        <option value="524901">Москва</option>
+        <option value="498817">Санкт-Петербург</option>
+        <option value="1503424">Омск</option>
+        <option value="479561">Уфа</option>
+        <option value="500411">Самара</option>
+    </select>
+
+    <h2>Текущая погода</h2>
+    <div id="weather">
+        <p>Загрузка данных...</p>
+    </div>
+
+    <script>
+    function getWeather(cityId) {
+        $.ajax({
+            url: 'get_weather.php',
+            type: 'GET',
+            data: { cityId: cityId },
+            success: function(data) {
+                var weather = JSON.parse(data);
+                var html = `
+                <p><b>${weather.name}</b></p>
+                    <p>Температура: ${weather.main.temp}°C</p>
+                    <p>Описание: ${weather.weather[0].description}</p>
+                    <p>Влажность: ${weather.main.humidity}%</p>
+                `;
+                $('#weather').html(html);
+            },
+            error: function() {
+                $('#weather').html('<p>Ошибка при получении данных</p>');
+            }
+        });
+    }
+
+    // Инициализация с выбором Уфы
+    getWeather('479561');
+    </script>
+</body>
+</html>
