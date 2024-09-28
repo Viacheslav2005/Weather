@@ -1,0 +1,70 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+.dark-mode {
+    --bg-color: #212529;
+    --text-color: #fff;
+    --primary-color: #007bff;
+    --secondary-color: #6b7280;
+
+}
+.light-mode {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+
+}
+#modal-content {
+    border-radius: 25px;
+}
+/* Для темной темы */
+.dark-mode #modal-content {
+ background-color: #333; 
+}
+
+.dark-mode .Name-modal {
+    color: #eee;
+}
+
+/* Для светлой темы */
+.light-mode #modal-content {
+ background-color: white;
+}
+
+.light-mode .Name-modal {
+ color: #333; 
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.div_up {
+    display: flex;
+    flex-direction: column;
+}
+.btn-socket {
+    width: 30px;
+    height: 30px;
+    background-color: #5850DD;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 95%;
+    left: 98%;
+}

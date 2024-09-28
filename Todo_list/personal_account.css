@@ -1,0 +1,261 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+.dark-mode {
+    --bg-color: #212529;
+    --text-color: #fff;
+    --primary-color: #007bff;
+    --secondary-color: #6b7280;
+
+}
+.light-mode {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+
+}
+#modal-content {
+    border-radius: 25px;
+}
+/* Для темной темы */
+.dark-mode #modal-content {
+ background-color: #333; 
+}
+
+.dark-mode .Name-modal {
+    color: #eee;
+}
+
+/* Для светлой темы */
+.light-mode #modal-content {
+ background-color: white;
+}
+
+.light-mode .Name-modal {
+ color: #333; 
+}
+.div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 60vw;
+    margin: 0 auto;
+}
+.div_add {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+}
+.div_add  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.div-search {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5%;
+    margin: 0 auto;
+    width: 50vw;
+}
+.search_form {
+    display: flex;
+    flex-direction: row;
+}
+.btn-submit-search {
+    border: none;
+    background: transparent;
+}
+.div-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-search {
+    border-radius: 5px;
+    width: 45vw;
+}
+.btn-socket {
+    width: 30px;
+    height: 30px;
+    background-color: #5850DD;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn-modal {
+    background-color: #5850DD;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 90%;
+    left: 75%;
+}
+select {
+    background-color: 5850DD;
+    color: white;
+}
+select option[value="All"], select option[value = "Complete"], select option[value = "Incomplete"]{
+    background: white;
+    color: 5850DD;
+}
+.note {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2.5vh;
+    width: 50vw;
+}
+.light-mode .btn-edit, .btn-delete {
+    border: none;
+    background-color: #f8f9fa;
+}
+.dark-mode .btn-edit, .btn-delete {
+    border: none;
+    background-color: #212529;
+}
+.add_record_form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    color: white;
+}
+.add_record_form input {
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+.modal_div_btn {
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+    justify-content: space-around;
+    font-family: "Montserrat", sans-serif;
+}
+.btn-primary {
+    border: none;
+    background-color: #5850DD;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.Name-modal {
+    font-size: 25px;
+}
+.note {
+    display: flex;
+    flex-direction: row;
+    width: 55vw;
+    margin: 5% auto 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.div-checkbox {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.input_descr {
+    width: 20vw;
+}
+.inputs_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkbox {
+    border: purple;
+    color: #6C63FF;
+    width: 26px;
+    height: 26px;
+}
+
+.note input.completed {
+    text-decoration: line-through; /* Добавляем зачеркивание */
+    color: #888; /* Изменяем цвет текста */
+}
+
+#modal_window_btn_close {
+    background: transparent;
+    border: 2px solid #6C63FF;
+    border-radius: 5px;
+    color: #6C63FF;
+}
+.btn-add {
+    background-color: #6C63FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.input_note {
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    width: 20vw;
+}
+.light-mode .input_note  {
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    color: black;
+}
+.dark-mode .input_note  {
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+.dark-mode .modal_window_input {
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 20vw;
+    padding: 10px 20px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+.light-mode .modal_window_input {
+    border-radius: 5px;
+    border-color: purple;
+    margin: 0 auto;
+    width: 20vw;
+    padding: 10px 20px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+.note form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25%;
+}
+.btn-modal:hover {
+    background-color: #534CC2;
+    transition: all 1.25s ease;
+}
